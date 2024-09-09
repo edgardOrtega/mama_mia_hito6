@@ -35,7 +35,7 @@ const CartProvider = ({ children }) => {
   );
 
   const getQuantity = () => {
-    return cart.reduce((total, pizza) => total + pizza.count, 0);
+    return Math.round(cart.reduce((total, pizza) => total + pizza.count, 0)) ;
   };
 
   return (
